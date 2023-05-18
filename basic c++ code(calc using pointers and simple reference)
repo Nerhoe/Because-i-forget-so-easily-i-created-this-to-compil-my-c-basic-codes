@@ -1,0 +1,90 @@
+#include <iostream>
+
+using namespace std;
+
+int add(int *num_1, int *num_2)
+{
+    int sum = *num_1 + *num_2;
+return sum;
+}
+
+int diff(int *num_1, int *num_2)
+{
+    int diff = *num_1 - *num_2;
+return diff;
+}
+
+int prod(int *num_1, int *num_2)
+{
+    int prod = *num_1 * *num_2;
+return prod;
+}
+
+
+int div(int *num_1, int *num_2)
+{
+    int Div = *num_1 / *num_2;
+return Div;
+}
+int main()
+    {
+        int ave;
+        int x;
+        int y;
+        int &a = x;
+        int &b = y;
+        char choice;
+
+do
+
+    {
+        cout<<"enter first numbers:"<<endl;
+        cin>>x;
+        cout<<"enter second number"<<endl;
+        cin>>y;
+
+        int op;
+
+        cout<<"Enter the operator to use"<<endl<<"1:add(+)"<<endl<<"2:diff(-)"<<endl<<"3:Mult(x)"<<endl<<"4:Div(%)"<<endl;
+        cin>>op;
+
+        if(op == 1)
+        {
+        cout<< x << " + "<< y << " = " << add(&x,&y)<<endl;;
+        }
+
+        else if(op == 2)
+        {
+        cout<< x << "   - "<< y << " = " << diff(&x,&y)<<endl;;
+        }
+
+        else if(op == 3)
+        {
+            cout<< x << " * "<< y << " = " << prod(&x,&y)<<endl;;
+        }
+
+        else if(op == 4)
+        {
+            cout<< x << " % "<< y << " = " << div(&x,&y)<<endl;
+        }
+
+      ave = (a+b)%2;
+        cout<<endl<<"average:"<<""<< ave;
+
+        if(ave % 2)
+        {
+            cout<<"-----"<<"the Average is odd"<<endl;
+        }
+        else
+        {
+            cout<<"-----"<<"the Average is even"<<endl;
+        }
+    cout << "Do you want to continue? (Y/N): ";
+        cin >> choice;
+       }
+
+        while (choice == 'Y' || choice == 'y');
+
+    cout << "akin lang si black beard";
+
+}
